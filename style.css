@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dongle:wght@300&family=Gugi&family=IBM+Plex+Sans+KR:wght@600&family=Song+Myung&display=swap');
+
+body {
+    background-color: rgb(254, 234, 197);
+    font-family: 'Gugi';
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+img {
+    width: 380px;
+    height: 380px;
+    border-radius: 24px;
+}
+
+#btnPlay {
+    background-color: #FACB01;
+    border: none;
+    box-shadow: 0 4px 16px rgba(250, 203, 1, 0.3);
+    padding: 10px 32px;
+    width: 50x;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 23px;
+    font-family: 'IBM Plex Sans KR';
+}
+#btnPlay:focus {
+    outline: 0;
+}
+#btnPlay:hover {
+    background-color: rgba(250, 203, 1, 0.9);
+    color: white;
+    box-shadow: 0 2px 4px rgba(250, 203, 1, 0.6);
+}
+
+#btnPause {
+    background-color: #FA4801;
+    border: none;
+    box-shadow: 0 4px 16px rgba(250, 72, 1, 0.3);
+    padding: 10px 32px;
+    width: 50x;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 23px;
+    font-family: 'IBM Plex Sans KR';
+}
+#btnPause:focus {
+    outline: 0;
+}
+#btnPause:hover {
+    background-color: rgba(250, 72, 1, 0.9);
+    color: white;
+    box-shadow: 0 2px 4px rgba(250, 72, 1, 0.6);
+}
+
+p {
+    font-family: 'IBM Plex Sans KR';
+    margin-bottom: 5px;
+}
+
+.volume {
+    width: 240px;
+}
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #FACB01;
+    cursor: pointer;
+}
+.volume::-moz-range-thumb {
+    cursor: pointer;
+    background:#FACB01;
+}
+
+#song-list {
+    background-color: rgb(254, 234, 197);
+    border-radius: 5px;
+    padding: 6px 2px;
+}

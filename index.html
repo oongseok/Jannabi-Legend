@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jannabi</title>
+    <link rel='icon' type='image/x-icon' href='images/favicon.ico'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>잔나비 2집 &lt;전설&gt;</h1>
+
+    <div class="container">
+        <img src="/images/Legend.jpg" alt="전설">
+
+        <p></p>
+
+        <button class="button" id="btnPlay">재생</button>
+        <button class="button" id="btnPause">일시정지</button>
+
+        <p>볼륨 조절</p>
+
+        <input type="range" id="volume" class="volume" min="1" max="100">
+
+        <p style="font-size: 10px;"></p>
+
+        <select id="song-list" onchange="changeSong()">
+            <option value="">곡 선택</option>
+            <option value="1">나의 기쁨 나의 노래 (Intro)</option>
+            <option value="2">투게더!</option>
+            <option value="3">조이풀 조이풀</option>
+            <option value="4">거울</option>
+            <option value="5">우리 애는요</option>
+            <option value="6">DOLMARO</option>
+            <option value="7">전설</option>
+            <option value="8">주저하는 연인들을 위해</option>
+            <option value="9">신나는 잠</option>
+            <option value="10">나쁜 꿈</option>
+            <option value="11">새 어둠 새 눈</option>
+            <option value="12">꿈과 책과 힘과 벽</option>
+        </select>
+    </div>
+    <script>
+        const audio = new Audio();
+
+        function changeSong() {
+            const songList = document.getElementById('song-list');
+            const song = songList.options[songList.selectedIndex].value;
+
+            if (audio.src !== `./audio/${song}.mp3`) {
+                audio.pause();
+                audio.src = `./audio/${song}.mp3`;
+                audio.load
+            }
+
+            const btnPlay = document.getElementById('btnPlay');
+            const btnPause = document.getElementById('btnPause');
+
+            btnPlay.addEventListener('click', function() {
+                audio.play();
+            });
+
+            btnPause.addEventListener('click', function() {
+                audio.pause();
+            });
+
+            const volume = document.getElementById('volume');
+
+            volume.addEventListener('change', function() {
+                audio.volume = this.value / 100
+            });
+        }
+    </script>
+</body>
+</html>
