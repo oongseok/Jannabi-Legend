@@ -13,7 +13,7 @@
     <div class="container">
         <img src="https://raw.githubusercontent.com/oongseok/Jannabi-Legend/main/images/Legend.jpg" alt="전설">
 
-        <p></p>
+        <p id="currentTime"></p>
 
         <button class="button" id="btnPlay">재생</button>
         <button class="button" id="btnPause">일시정지</button>
@@ -76,6 +76,12 @@
             volume.addEventListener('change', function() {
                 audio.volume = this.value / 100
             });
+
+            audio.onloadedmetadata = function() {
+                const songDurationMin = parseInt(audio.duration / 60)
+                const songDurationSec = Math.round(audio.duration % 60)
+                document.getElementById('currentTime').innerHTML = "길이: " + songDurationMin +"분 " + songDurationSec + "초";
+            }
         }
     </script>
 </body>
