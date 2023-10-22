@@ -63,6 +63,26 @@ img {
     box-shadow: 0 2px 4px rgba(250, 72, 1, 0.6);
 }
 
+#btnRestart {
+    background-color: rgba(181, 181, 181);
+    border: none;
+    box-shadow: 0 4px 16px rgba(181, 181, 181, 0.3);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 23px;
+    font-family: 'IBM Plex Sans KR';
+}
+#btnRestart:focus {
+    outline: 0;
+}
+#btnRestart:hover {
+    background-color: rgba(181, 181, 181, 0.9);
+    color: white;
+    box-shadow: rgba(181, 181, 181, 0.6);
+}
+
 p {
     font-family: 'IBM Plex Sans KR';
     margin-bottom: 5px;
