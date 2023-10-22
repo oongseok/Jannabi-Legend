@@ -4,4 +4,6 @@
 
 **오히려 좋다. 👍**
 
+배포 주소: https://oongseok.github.io/Jannabi-Legend/
+
 ![image](https://github.com/oongseok/Jannabi-Legend/assets/140753244/6000d333-fe81-4391-8cb4-e2aa1a239567)
