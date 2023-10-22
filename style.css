@@ -21,6 +21,10 @@ img {
     border-radius: 24px;
 }
 
+#currentTime {
+    margin-top: 3px;
+}
+
 #btnPlay {
     background-color: #FACB01;
     border: none;
