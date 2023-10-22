@@ -11,19 +11,20 @@
     <h1>잔나비 2집 &lt;전설&gt;</h1>
 
     <div class="container">
-        <img src="https://raw.githubusercontent.com/oongseok/Jannabi-Legend/main/images/Legend.jpg" alt="전설">
+        <img src="/images/Legend.jpg" alt="전설">
 
         <p></p>
 
         <button class="button" id="btnPlay">재생</button>
         <button class="button" id="btnPause">일시정지</button>
+        <button class="button" id="btnRestart">처음부터</button>
 
         <p>볼륨 조절</p>
 
         <input type="range" id="volume" class="volume" min="1" max="100">
 
         <p style="font-size: 10px;"></p>
-
+        
         <select id="song-list" onchange="changeSong()">
             <option value="">곡 선택</option>
             <option value="1">나의 기쁨 나의 노래 (Intro)</option>
@@ -55,6 +56,7 @@
 
             const btnPlay = document.getElementById('btnPlay');
             const btnPause = document.getElementById('btnPause');
+            const btnRestart = document.getElementById('btnRestart')
 
             btnPlay.addEventListener('click', function() {
                 audio.play();
@@ -63,6 +65,11 @@
             btnPause.addEventListener('click', function() {
                 audio.pause();
             });
+
+            btnRestart.addEventListener('click', function() {
+                audio.currentTime = 0;
+                audio.play()
+            })
 
             const volume = document.getElementById('volume');
 
